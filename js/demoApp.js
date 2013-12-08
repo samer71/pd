@@ -11,11 +11,6 @@ function onDeviceReady() {
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 	document.addEventListener("online", onOnline, false);
-	// Access contacts
-	var options = new ContactFindOptions();
-	options.filter = "Aoudi";
-	var fields = ["displayName", "name"];
-	navigator.contacts.find(fields, onSuccess, onError, options);
 }
 
 function onOffline() {
@@ -116,6 +111,11 @@ $('#location').on('click', function (e)  {
 });
 
 $('#contacts').on('click', function (e)  {
+	// Access contacts
+	var options = new ContactFindOptions();
+	options.filter = "Aoudi";
+	var fields = ["displayName", "name"];
+	navigator.contacts.find(fields, onSuccess, onError, options);
 	$.mobile.changePage("#contacts");
 });
 
