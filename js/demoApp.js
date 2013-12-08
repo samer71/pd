@@ -91,7 +91,7 @@ function onGetLocationError(error)
  
 function onSuccess(contacts) {
 	for (var i = 0; i < contacts.length; i++) {
-		console.log("Display Name = " + contacts[i].displayName);
+		$("#contactlist").html("Display Name = " + contacts[i].displayName);
 	}
 }
 
