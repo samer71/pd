@@ -6,17 +6,18 @@ $(document).ready(function() {
 // Global variables
 var map,lat, lon, latlon;
 
-// PhoneGap is loaded and it is now safe to make calls 
+// PhoneGap is loaded and it is now safe to make calls to device API
 function onDeviceReady() {
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 	document.addEventListener("online", onOnline, false);
-
 }
+
 function onOffline() {
 	// When device goes offline, display error
 	onGetLocationError(4);
 }
+
 function onOnline() {
 	// When the device goes online, go to homepage
     $.mobile.changePage("#index");
