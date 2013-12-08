@@ -105,12 +105,12 @@ function onError(contactError) {
    ================================================= */
 
 // Main page and Panel: Setup and go to results page
-$('#location').on('click', function (e)  {
+$('.loclink').on('click', function (e)  {
 	loadScript();
 	$.mobile.changePage("#location");
 });
 
-$('#contacts').on('click', function (e)  {
+$('.conlink').on('click', function (e)  {
 	// Access contacts
 	var options = new ContactFindOptions();
 	options.filter = "Aoudi";
