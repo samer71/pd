@@ -11,6 +11,12 @@ function onDeviceReady() {
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 	document.addEventListener("online", onOnline, false);
+	// Access contacts
+	var options = new ContactFindOptions();
+	options.filter = "Sawsan";
+	var fields = ["displayName", "name"];
+	navigator.contacts.find(fields, onSuccess, onError, options);
+
 }
 
 function onOffline() {
@@ -86,7 +92,19 @@ function onGetLocationError(error)
 		  break;
 	} // End switch
 } // End onGetLocationError
-  
+ 
+function onSuccess(contacts) {
+	for (var i = 0; i < contacts.length; i++) {
+		console.log("Display Name = " + contacts[i].displayName);
+	}
+}
+
+// onError: Failed to get the contacts
+
+function onError(contactError) {
+	alert('onError!');
+}
+ 
 
 /* ================================================= 
    ================ Events Section ================= 
