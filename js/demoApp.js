@@ -13,7 +13,7 @@ function onDeviceReady() {
 	document.addEventListener("online", onOnline, false);
 	// Access contacts
 	var options = new ContactFindOptions();
-	options.filter = "Sawsan";
+	options.filter = "Aoudi";
 	var fields = ["displayName", "name"];
 	navigator.contacts.find(fields, onSuccess, onError, options);
 }
