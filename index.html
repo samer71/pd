@@ -20,7 +20,7 @@
     <div data-role="content">
         <ul id="list" data-role="listview" data-divider-theme="e" data-inset="false">
             <li data-role="list-divider" role="heading">List</li>
-            <li><a href="#stores" id="storeslink">Geolocation</a></li>
+            <li><a href="#location" id="loclink">Geolocation</a></li>
             <li><a href="#contacts">Contacts</a></li>
             <li><a href="#page4">Page 4</a></li>
         </ul>
@@ -38,10 +38,10 @@
     
 </div><!-- End Index -->
 
-<!-- Stores Page -->
-<div data-role="page" id="stores">
+<!-- Location Page -->
+<div data-role="page" id="location">
     <div data-role="header" data-theme="b" >
-        <h1 id="storeheader"></h1>
+        <h1 id="locheader">My Location</h1>
         <a id="gohome" href="#index" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
         <div data-role="navbar" data-iconpos="left">
 		<ul id="options">
@@ -74,8 +74,32 @@
     <div data-role="footer" data-theme="b" >
     <h4>&copy; Samer Aoudi 2013</h4>
     </div><!-- /footer -->
-</div><!-- End Results -->
-         
+</div><!-- End Location -->
+
+<!-- Location Page -->
+<div data-role="page" id="contacts">
+    <div data-role="header" data-theme="b" >
+        <h1 id="locheader">My Location</h1>
+        <a id="gohome" href="#index" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
+    </div><!-- /header -->
+    
+    <div data-role="content" id="contactlist">
+    </div><!-- contact list -->
+    
+    
+    <div data-role="content">
+        <ul data-role="listview" data-divider-theme="e" data-inset="false" data-filter="true">
+            <li data-role="list-divider" role="heading">Main List</li>
+            <li><a href="#page2" id="storeslink">Page 2</a></li>
+            <li><a href="#page3">Page 3</a></li>
+            <li><a href="#page4">Page 4</a></li>
+        </ul>
+    </div><!-- Content: Results List -->
+            
+    <div data-role="footer" data-theme="b" >
+    <h4>&copy; Samer Aoudi 2013</h4>
+    </div><!-- /footer -->
+</div><!-- End Location -->         
 	<script src="js/demoApp.js"></script>
 </body>
 </html>

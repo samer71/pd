@@ -11,11 +11,7 @@ function onDeviceReady() {
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 	document.addEventListener("online", onOnline, false);
-	// Access contacts
-	var options = new ContactFindOptions();
-	options.filter = "Sawsan";
-	var fields = ["displayName", "name"];
-	navigator.contacts.find(fields, onSuccess, onError, options);
+	
 
 }
 
@@ -111,9 +107,18 @@ function onError(contactError) {
    ================================================= */
 
 // Main page and Panel: Setup and go to results page
-$('#storeslink').on('click', function (e)  {
+$('#location').on('click', function (e)  {
 	loadScript();
-	$.mobile.changePage("#stores");
+	$.mobile.changePage("#location");
+});
+
+$('#contacts').on('click', function (e)  {
+	// Access contacts
+	var options = new ContactFindOptions();
+	options.filter = "Sawsan";
+	var fields = ["displayName", "name"];
+	navigator.contacts.find(fields, onSuccess, onError, options);
+	$.mobile.changePage("#contacts");
 });
 
 $(window).on("orientationchange",function(event){
