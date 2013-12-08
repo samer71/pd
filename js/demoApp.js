@@ -8,6 +8,9 @@ var map,lat, lon, latlon;
 
 // PhoneGap is loaded and it is now safe to make calls to device API
 function onDeviceReady() {
+	$.mobile.defaultPageTransition   = 'none';
+	$.mobile.defaultDialogTransition = 'none';
+	$.mobile.buttonMarkup.hoverDelay = 0;
 	// iOS. BB. Android
 	document.addEventListener("offline", onOffline, false);
 	document.addEventListener("online", onOnline, false);
@@ -106,6 +109,8 @@ function onError(contactError) {
 
 // Main page and Panel: Setup and go to results page
 $('.loclink').on('click', function (e)  {
+	$("#errorholder").hide();
+	$("#mapholder").show();
 	loadScript();
 	$.mobile.changePage("#location");
 });

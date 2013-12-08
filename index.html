@@ -45,7 +45,7 @@
         <div data-role="navbar" data-iconpos="left">
 		<ul id="options">
             <li><a href="#index">Home</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#contacts" class="conlink">Contacts</a></li>
 		</ul>
 		</div><!-- /navbar -->
     </div><!-- /header -->
@@ -60,14 +60,6 @@
         <h3 style="color:#336699;">Fix it and try again.</h3>   
 	</div><!-- errorholder -->
     
-    <div data-role="content">
-        <ul data-role="listview" data-divider-theme="e" data-inset="false" data-filter="true">
-            <li data-role="list-divider" role="heading">Main List</li>
-            <li><a href="#page2" id="storeslink">Page 2</a></li>
-            <li><a href="#page3">Page 3</a></li>
-            <li><a href="#page4">Page 4</a></li>
-        </ul>
-    </div><!-- Content: Results List -->
             
     <div data-role="footer" data-theme="b" >
     <h4>&copy; Samer Aoudi 2013</h4>
@@ -77,7 +69,7 @@
 <!-- Location Page -->
 <div data-role="page" id="contacts">
     <div data-role="header" data-theme="b" >
-        <h1 id="locheader">My Location</h1>
+        <h1 id="locheader">Contacts</h1>
         <a id="gohome" href="#index" data-role="button" data-iconpos="notext" data-icon="home" data-inline="true">Home</a>
     </div><!-- /header -->
     
@@ -86,11 +78,10 @@
     
     
     <div data-role="content">
-        <ul data-role="listview" data-divider-theme="e" data-inset="false" data-filter="true">
+        <ul data-role="listview" data-divider-theme="e" data-inset="false">
             <li data-role="list-divider" role="heading">Main List</li>
-            <li><a href="#page2" id="storeslink">Page 2</a></li>
-            <li><a href="#page3">Page 3</a></li>
-            <li><a href="#page4">Page 4</a></li>
+            <li><a href="#location" class="loclink">Geolocation</a></li>
+            <li><a href="#index">Home</a></li>
         </ul>
     </div><!-- Content: Results List -->
             
